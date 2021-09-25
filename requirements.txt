@@ -1,0 +1,6 @@
+bertopic
+keybert
+numpy
+pandas
+pyquery
+sentence-transformers
