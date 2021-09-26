@@ -2,8 +2,9 @@
 from genericpath import exists, isfile
 import json, os
 from pprint import pprint
+from keyword_extraction import *
 from topic_modeling import *
-from xml_parser import *
+# from xml_parser import *
 
 def file_to_json(path: str, storage_path: str = 'storage'):
     """
@@ -22,4 +23,8 @@ def file_to_json(path: str, storage_path: str = 'storage'):
 
     os.makedirs(path=storage_path, exist_ok=True)    
     with open(file=path, mode='r') as file:
+        json_dict = dict({
+            'keywords': set(),
+            'topics': set(find_topics(documents=))
+        })
         json.dump(obj=file)
